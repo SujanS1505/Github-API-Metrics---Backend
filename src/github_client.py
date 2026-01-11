@@ -1,6 +1,7 @@
 import requests
 from config import GITHUB_TOKEN, GITHUB_API_URL
 
+
 class GitHubClient:
     def __init__(self):
         self.headers = {
