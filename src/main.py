@@ -2,7 +2,8 @@ import argparse
 from github_client import GitHubClient
 from api.issues import fetch_all_issues
 from metrics.issue_backlog_metrics import (
-    open_vs_closed_ratio,
+    issues_created_vs_closed_by_year,
+    open_closed_ratio,
     average_resolution_time_days,
     bug_vs_feature_ratio,
     issues_created_vs_closed_per_sprint
@@ -44,19 +45,35 @@ def main():
         print("No issues found in this repository.")
 
 
-    ratio = open_vs_closed_ratio(issues)
-    avg_resolution = average_resolution_time_days(issues)
+    print("\n📊 ISSUE ANALYTICS")
+
+    ratio = open_closed_ratio(issues)
+    print("Open issues:", ratio["open_issues"])
+    print("Closed issues:", ratio["closed_issues"])
+    print("Open/Closed ratio:", ratio["open_closed_ratio"])
+
+    avg_time = average_resolution_time_days(issues)
+    print("Avg resolution time (days):", avg_time)
+
     bug_feature = bug_vs_feature_ratio(issues)
-    throughput = issues_created_vs_closed_per_sprint(issues)
+    print("Bug issues:", bug_feature["bug_issues"])
+    print("Feature issues:", bug_feature["feature_issues"])
+    print("Bug/Feature ratio:", bug_feature["bug_feature_ratio"])
 
-    print("\n--- Issue & Backlog Metrics ---")
-    print("Open vs Closed Ratio:", ratio)
-    print("Average Resolution Time (days):", avg_resolution)
-    print("Bug vs Feature Ratio:", bug_feature)
 
-    print("\nIssues Created vs Closed per Sprint (sample):")
-    for sprint, data in list(throughput.items())[:3]:
-        print(sprint, data)
+
+    sprint = issues_created_vs_closed_per_sprint(issues)
+    print("\nIssues per sprint:")
+    print("Created:")
+
+    for k, v in sprint["created"].items():
+        print(f"Sprint {k}: Created {v} issues")
+
+    print("Closed:")
+
+    for k, v in sprint["closed"].items():
+        print(f"Sprint {k}: Closed {v} issues")
+
 
 
 if __name__ == "__main__":

@@ -2,7 +2,7 @@
 from datetime import datetime
 from requests.exceptions import HTTPError
 
-MAX_PAGES = 20          # Safety limit 
+MAX_PAGES = 40          # Safety limit 
 PER_PAGE = 100
 
 
