@@ -50,19 +50,6 @@ def bug_vs_feature_ratio(issues):
     }
 
 
-def issues_created_vs_closed_by_year(issues):
-    created = Counter()
-    closed = Counter()
-
-    for issue in issues:
-        created[issue["created_at"].year] += 1
-        if issue["closed_at"]:
-            closed[issue["closed_at"].year] += 1
-
-    return {
-        "created": dict(created),
-        "closed": dict(closed)
-    }
 
 
 def issues_created_vs_closed_per_sprint(

@@ -2,12 +2,17 @@ import argparse
 from github_client import GitHubClient
 from api.issues import fetch_all_issues
 from metrics.issue_backlog_metrics import (
-    issues_created_vs_closed_by_year,
     open_closed_ratio,
     average_resolution_time_days,
     bug_vs_feature_ratio,
     issues_created_vs_closed_per_sprint
 )
+from reports.csv_writer import (
+    ensure_dir,
+    write_key_value_csv,
+    write_time_series_csv
+)
+
 
 
 
@@ -73,6 +78,51 @@ def main():
 
     for k, v in sprint["closed"].items():
         print(f"Sprint {k}: Closed {v} issues")
+
+
+    # creating csv files
+
+    REPORT_DIR = "reports"
+    ensure_dir(REPORT_DIR)
+
+    # Issue summary metrics
+    summary_metrics = {
+        "open_issues": ratio["open_issues"],
+        "closed_issues": ratio["closed_issues"],
+        "open_closed_ratio": ratio["open_closed_ratio"],
+        "avg_resolution_time_days": avg_time,
+        "bug_issues": bug_feature["bug_issues"],
+        "feature_issues": bug_feature["feature_issues"],
+        "bug_feature_ratio": bug_feature["bug_feature_ratio"]
+    }
+
+    write_key_value_csv(
+        f"{REPORT_DIR}/issue_summary_metrics.csv",
+        summary_metrics
+    )
+
+
+    # Sprint throughput
+    sprint_metrics = issues_created_vs_closed_per_sprint(issues)
+
+    sprint_rows = []
+    for sprint_date in sorted(
+        set(sprint_metrics["created"]) | set(sprint_metrics["closed"])
+    ):
+        sprint_rows.append([
+            sprint_date,
+            sprint_metrics["created"].get(sprint_date, 0),
+            sprint_metrics["closed"].get(sprint_date, 0)
+        ])
+
+    write_time_series_csv(
+        f"{REPORT_DIR}/issue_sprint_throughput.csv",
+        sprint_rows,
+        headers=["sprint_start_date", "issues_created", "issues_closed"]
+    )
+
+    print("\n CSV reports generated in /reports directory")
+
 
 
 
