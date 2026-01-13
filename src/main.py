@@ -2,6 +2,8 @@ import argparse
 from github_client import GitHubClient
 from runners.issue_metrics_runner import run_issue_metrics
 from runners.code_quality_runner import run_code_quality_metrics
+from runners.security_metrics_runner import run_security_metrics
+
 
 
 def main():
@@ -14,7 +16,7 @@ def main():
     parser.add_argument(
         "--mode",
         required=True,
-        choices=["issues", "code-quality", "all"],
+        choices=["issues", "code-quality","security", "all"],
         help="Which metrics to run"
     )
 
@@ -36,6 +38,9 @@ def main():
 
     if args.mode in ("code-quality", "all"):
         run_code_quality_metrics(client, owner, repo)
+
+    if args.mode in ("security", "all"):
+        run_security_metrics(client, owner, repo)
 
 
 if __name__ == "__main__":

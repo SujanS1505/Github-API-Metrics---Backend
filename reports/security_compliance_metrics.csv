@@ -1,0 +1,5 @@
+metric,value
+open_security_alerts,0
+avg_remediation_time_days,
+signed_commits_percentage,100.0
+protected_branches,0
