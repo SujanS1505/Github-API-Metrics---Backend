@@ -1,0 +1,17 @@
+Metric,Value
+total_loc,428647
+comment_to_code_ratio,0.019353920592002277
+num_files,2527
+avg_file_size,118767.89077958053
+largest_file_size,47520442
+language_distribution,"{'Unknown': 718, 'YAML': 274, 'Markdown': 12, 'Python': 710, 'C': 4, 'Shell': 89, 'Text': 100, 'JSON': 581, 'Dockerfile': 8, 'JavaScript': 2, 'Protobuf': 29}"
+language_percentage,"{'Unknown': 28.413138108428964, 'YAML': 10.842896715472893, 'Markdown': 0.4748713889988128, 'Python': 28.09655718242976, 'C': 0.15829046299960428, 'Shell': 3.521962801741195, 'Text': 3.957261574990107, 'JSON': 22.99168975069252, 'Dockerfile': 0.31658092599920856, 'JavaScript': 0.07914523149980214, 'Protobuf': 1.147605856747131}"
+LOC added,3393
+LOC deleted,150
+Net LOC growth,3243
+num_commits,30
+test_to_production_ratio,0.7074324324324325
+duplicate_code_percentage,8.626830233478433
+binary_files_count,60
+generated_files_count,0
+config_files_count,859
