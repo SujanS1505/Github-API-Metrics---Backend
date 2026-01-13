@@ -1,0 +1,114 @@
+number,created_at,merged_at,lead_time_hours,lead_time_days,author,title,url
+136086,2026-01-08T00:05:36Z,2026-01-13T09:59:37Z,129.9,5.41,richabanker,Graduate watch_list_duration_seconds to BETA,https://github.com/kubernetes/kubernetes/pull/136086
+135770,2025-12-16T13:28:13Z,2026-01-13T03:03:36Z,661.59,27.57,dnaeon,code-generator/defaulter-gen: generate defaults only if required tags are present,https://github.com/kubernetes/kubernetes/pull/135770
+135369,2025-11-20T13:58:06Z,2026-01-12T16:54:13Z,1274.94,53.12,saschagrunert,test: Fix image credential pulls test node scheduling,https://github.com/kubernetes/kubernetes/pull/135369
+135485,2025-11-27T13:50:07Z,2026-01-12T16:54:22Z,1107.07,46.13,saschagrunert,Fix device plugin admission failure after container restart,https://github.com/kubernetes/kubernetes/pull/135485
+136117,2026-01-08T22:23:29Z,2026-01-13T02:13:44Z,99.84,4.16,lalitc375,Add utilities to allow strategy.go files to enable DV native validations,https://github.com/kubernetes/kubernetes/pull/136117
+135977,2025-12-30T11:25:49Z,2026-01-13T04:21:41Z,328.93,13.71,pohly,make test: fix support for PARALLEL,https://github.com/kubernetes/kubernetes/pull/135977
+135850,2025-12-19T16:42:48Z,2026-01-13T02:21:41Z,585.65,24.4,neolit123,Automated cherry pick of #135400: kubeadm: do not sort extraArgs alpha-numerically,https://github.com/kubernetes/kubernetes/pull/135850
+136112,2026-01-08T19:11:18Z,2026-01-13T02:13:36Z,103.04,4.29,danwinship,Drop TopologyAwareHints and ServiceTraficDistribution feature gates,https://github.com/kubernetes/kubernetes/pull/136112
+136183,2026-01-12T21:00:59Z,2026-01-12T23:55:38Z,2.91,0.12,aramase,test: fix kind local registry config for kms ci jobs,https://github.com/kubernetes/kubernetes/pull/136183
+136161,2026-01-11T21:28:05Z,2026-01-12T21:35:37Z,24.13,1.01,dims,Update golang.org/x dependencies to latest versions,https://github.com/kubernetes/kubernetes/pull/136161
+136122,2026-01-09T03:24:30Z,2026-01-12T21:25:01Z,90.01,3.75,danwinship,Automated cherry pick of #135631: Switch ipvs and winkernel back to more regular forced syncs,https://github.com/kubernetes/kubernetes/pull/136122
+135759,2025-12-15T17:37:21Z,2026-01-12T20:45:09Z,675.13,28.13,Abhigyan-Shekhar,FIX: Deep copy MapType in CEL composition to prevent data race,https://github.com/kubernetes/kubernetes/pull/135759
+135597,2025-12-05T00:21:01Z,2026-01-12T20:45:01Z,932.4,38.85,alvaroaleman,Service account controller: Wire through context,https://github.com/kubernetes/kubernetes/pull/135597
+135412,2025-11-23T18:56:41Z,2026-01-12T19:24:09Z,1200.46,50.02,omerap12,HPA: Enable DV support for MaxReplicas,https://github.com/kubernetes/kubernetes/pull/135412
+135887,2025-12-22T10:00:43Z,2026-01-12T18:30:17Z,512.49,21.35,ErikJiang,fix log validation messages,https://github.com/kubernetes/kubernetes/pull/135887
+135668,2025-12-08T19:50:35Z,2026-01-12T18:30:09Z,838.66,34.94,yliaog,added unit test case to ensure implicit DRA extended resource is handled properly during pod admission at kubelet,https://github.com/kubernetes/kubernetes/pull/135668
+136079,2026-01-07T17:59:19Z,2026-01-10T01:57:46Z,55.97,2.33,lalitc375," Re-apply ""Migrate ResourceSlice map key validation to declarative validation""",https://github.com/kubernetes/kubernetes/pull/136079
+135949,2025-12-26T18:48:23Z,2026-01-12T16:54:29Z,406.1,16.92,lalitc375,Promote validation-gen tags to Stable,https://github.com/kubernetes/kubernetes/pull/135949
+135992,2026-01-01T11:27:04Z,2026-01-12T14:28:41Z,267.03,11.13,bart0sh,Migrate remaining kubelet subdirs to contextual logging,https://github.com/kubernetes/kubernetes/pull/135992
+136123,2026-01-09T03:24:57Z,2026-01-10T01:43:39Z,22.31,0.93,danwinship,Automated cherry pick of #135631: Switch ipvs and winkernel back to more regular forced syncs,https://github.com/kubernetes/kubernetes/pull/136123
+136167,2026-01-12T08:43:09Z,2026-01-12T12:34:40Z,3.86,0.16,Karthik-K-N,"DRA: remove deprecated test method usage, fix linter hints",https://github.com/kubernetes/kubernetes/pull/136167
+135911,2025-12-23T13:16:59Z,2026-01-12T10:46:06Z,477.49,19.9,ShaanveerS,Add UDP and explicit TCP support to agnhost porter ,https://github.com/kubernetes/kubernetes/pull/135911
+136127,2026-01-09T09:23:42Z,2026-01-12T09:54:10Z,72.51,3.02,carlory,"kubeadm: fix a bug where kubeadm upgrade is failed if the content of the `kubeadm-flags.env` file is `KUBELET_KUBEADM_ARGS=""""`",https://github.com/kubernetes/kubernetes/pull/136127
+135890,2025-12-22T16:35:42Z,2026-01-10T01:57:39Z,441.37,18.39,CLBRITTON2,Feat: wire discovery group for declarative validation and migrate Endpoint.Addresses + EndpointSlice.AddressType,https://github.com/kubernetes/kubernetes/pull/135890
+136151,2026-01-10T22:07:18Z,2026-01-11T11:59:57Z,13.88,0.58,pohly,testing: partial revert of E2E + DRA upgrade/downgrade,https://github.com/kubernetes/kubernetes/pull/136151
+135959,2025-12-27T21:12:22Z,2026-01-07T13:31:46Z,256.32,10.68,pohly,client-go testing: support List+Watch with ResourceVersion,https://github.com/kubernetes/kubernetes/pull/135959
+136130,2026-01-09T09:43:48Z,2026-01-10T22:23:57Z,36.67,1.53,LoginovIlia,kubeadm: switch tests to NewClientset,https://github.com/kubernetes/kubernetes/pull/136130
+136099,2026-01-08T10:16:45Z,2026-01-10T20:46:00Z,58.49,2.44,jsafrane,Automated cherry pick of #135629: selinux: Fix the controller to ignore finished pods,https://github.com/kubernetes/kubernetes/pull/136099
+136119,2026-01-09T00:05:31Z,2026-01-09T16:47:43Z,16.7,0.7,lalitc375,Bring the fuzz testing  changes back which was removed due to  an accident ,https://github.com/kubernetes/kubernetes/pull/136119
+136097,2026-01-08T10:03:24Z,2026-01-10T04:09:40Z,42.1,1.75,atiratree,Automated cherry pick of #135428: schedule pod availability checks at the correct time in StatefulSets,https://github.com/kubernetes/kubernetes/pull/136097
+136096,2026-01-08T07:56:52Z,2026-01-10T00:17:48Z,40.35,1.68,pacoxu,Update error message expectation in criproxy_test,https://github.com/kubernetes/kubernetes/pull/136096
+134681,2025-10-17T14:24:26Z,2026-01-10T00:17:40Z,2025.89,84.41,JoelSpeed,Enable nonullable rule for Kube API Linter,https://github.com/kubernetes/kubernetes/pull/134681
+135687,2025-12-10T04:34:05Z,2026-01-09T23:27:41Z,738.89,30.79,yashsingh74,Update CNI plugins to v1.9.0,https://github.com/kubernetes/kubernetes/pull/135687
+136115,2026-01-08T20:48:45Z,2026-01-09T21:53:39Z,25.08,1.05,harche,Remove year from runtime_test.go file copyright notice,https://github.com/kubernetes/kubernetes/pull/136115
+136085,2026-01-07T23:51:58Z,2026-01-09T15:21:49Z,39.5,1.65,richabanker,Log WatchList initial listing phase completion,https://github.com/kubernetes/kubernetes/pull/136085
+136084,2026-01-07T23:25:48Z,2026-01-09T15:21:42Z,39.93,1.66,richabanker,Add auditID to Watch start logs,https://github.com/kubernetes/kubernetes/pull/136084
+136041,2026-01-05T21:19:50Z,2026-01-09T20:43:41Z,95.4,3.97,richabanker,Update metrics docs 1.35,https://github.com/kubernetes/kubernetes/pull/136041
+136140,2026-01-09T15:27:50Z,2026-01-09T17:39:42Z,2.2,0.09,pohly,E2E framework: fix nil pointer crash in TContext,https://github.com/kubernetes/kubernetes/pull/136140
+136132,2026-01-09T10:43:35Z,2026-01-09T16:47:50Z,6.07,0.25,pohly,ktesting: avoid increasing default verbosity,https://github.com/kubernetes/kubernetes/pull/136132
+136098,2026-01-08T10:15:12Z,2026-01-09T15:59:44Z,29.74,1.24,jsafrane,Automated cherry pick of #135629: selinux: Fix the controller to ignore finished pods,https://github.com/kubernetes/kubernetes/pull/136098
+135664,2025-12-08T14:34:38Z,2026-01-08T14:01:47Z,743.45,30.98,pohly,DRA e2e: upgrade/downgrade refactor,https://github.com/kubernetes/kubernetes/pull/135664
+136136,2026-01-09T13:20:36Z,2026-01-09T14:09:44Z,0.82,0.03,dims,Fix data race in devicemanager PluginDisconnected logging,https://github.com/kubernetes/kubernetes/pull/136136
+136128,2026-01-09T09:29:17Z,2026-01-09T11:09:47Z,1.68,0.07,p0lyn0mial,kcm: remove WatchListClient feature gate override,https://github.com/kubernetes/kubernetes/pull/136128
+136076,2026-01-07T17:15:41Z,2026-01-09T11:09:39Z,41.9,1.75,kannon92,[flake] wait for job suspended condition for JobMutable test cases,https://github.com/kubernetes/kubernetes/pull/136076
+136124,2026-01-09T05:21:48Z,2026-01-09T09:35:42Z,4.23,0.18,MohammedMutee,Fix flaky typecheck by enforcing serial execution,https://github.com/kubernetes/kubernetes/pull/136124
+136105,2026-01-08T12:46:40Z,2026-01-09T06:09:41Z,17.38,0.72,atiratree,Automated cherry pick of #135625: mark QuotaMonitor as not running and invalidate monitors list,https://github.com/kubernetes/kubernetes/pull/136105
+135631,2025-12-05T17:02:20Z,2026-01-08T20:41:47Z,819.66,34.15,danwinship,Switch ipvs and winkernel back to more regular forced syncs,https://github.com/kubernetes/kubernetes/pull/135631
+136106,2026-01-08T12:50:16Z,2026-01-09T02:49:40Z,13.99,0.58,atiratree,Automated cherry pick of #135625: mark QuotaMonitor as not running and invalidate monitors list,https://github.com/kubernetes/kubernetes/pull/136106
+136104,2026-01-08T12:44:37Z,2026-01-09T02:49:40Z,14.08,0.59,atiratree,Automated cherry pick of #135625: mark QuotaMonitor as not running and invalidate monitors list,https://github.com/kubernetes/kubernetes/pull/136104
+136093,2026-01-08T07:27:01Z,2026-01-08T23:41:39Z,16.24,0.68,pohly,Automated cherry pick of #135377: Fix race condition in DRA health e2e test pod status update,https://github.com/kubernetes/kubernetes/pull/136093
+134909,2025-10-27T15:18:26Z,2026-01-08T21:41:43Z,1758.39,73.27,darshansreenivas,feat: wire network group for declarative validation and +k8s:required to IngressClassParametersReference.Name,https://github.com/kubernetes/kubernetes/pull/134909
+135358,2025-11-19T21:05:18Z,2026-01-08T20:41:39Z,1199.61,49.98,harche,Sort runtime handlers list coming from the CRI runtime,https://github.com/kubernetes/kubernetes/pull/135358
+136108,2026-01-08T15:55:40Z,2026-01-08T20:41:54Z,4.77,0.2,pohly,"dependencies: ginkgo v2.27.4, gomega v1.39.0",https://github.com/kubernetes/kubernetes/pull/136108
+135551,2025-12-02T15:09:49Z,2026-01-08T19:49:49Z,892.67,37.19,Jefftree,Add pod indexer to deployment controller,https://github.com/kubernetes/kubernetes/pull/135551
+133678,2025-08-24T21:49:34Z,2026-01-08T19:49:41Z,3286.0,136.92,mortent,DRA: Avoid unnecessary work in allocator,https://github.com/kubernetes/kubernetes/pull/133678
+136111,2026-01-08T17:16:58Z,2026-01-08T18:57:46Z,1.68,0.07,aojea,define endpointslice.endpoints as optional,https://github.com/kubernetes/kubernetes/pull/136111
+136110,2026-01-08T17:15:55Z,2026-01-08T18:57:39Z,1.7,0.07,liggitt,Fix kyaml output of watch events,https://github.com/kubernetes/kubernetes/pull/136110
+136103,2026-01-08T12:19:35Z,2026-01-08T18:37:41Z,6.3,0.26,atiratree,Automated cherry pick of #135625: mark QuotaMonitor as not running and invalidate monitors list,https://github.com/kubernetes/kubernetes/pull/136103
+135838,2025-12-18T19:15:36Z,2026-01-08T02:35:38Z,487.33,20.31,lalitc375,Automated cherry pick of #135714: Ensure metricIdentifier uses scheme for kind resolution,https://github.com/kubernetes/kubernetes/pull/135838
+135930,2025-12-25T08:47:14Z,2026-01-08T17:31:40Z,344.74,14.36,249043822,Fix:globalmount path may be residual while pod creation-deletion,https://github.com/kubernetes/kubernetes/pull/135930
+135955,2025-12-27T12:33:49Z,2026-01-08T15:09:42Z,290.6,12.11,utam0k,scheduler: align the meaning of victim metrics between async preemption and sync preemption,https://github.com/kubernetes/kubernetes/pull/135955
+134701,2025-10-18T03:04:44Z,2026-01-08T14:01:40Z,1978.95,82.46,anson627,Make ConcurrentResourceClaimSyncs configurable,https://github.com/kubernetes/kubernetes/pull/134701
+136100,2026-01-08T10:58:11Z,2026-01-08T13:09:48Z,2.19,0.09,soltysh,Remove dead api,https://github.com/kubernetes/kubernetes/pull/136100
+135234,2025-11-08T15:03:51Z,2026-01-08T13:09:40Z,1462.1,60.92,atiratree,rename scaleReplicaSetAndRecordEvent to scaleReplicaSetWithLazyAnnotationUpdate,https://github.com/kubernetes/kubernetes/pull/135234
+135986,2025-12-31T08:26:55Z,2026-01-08T11:49:53Z,195.38,8.14,scaliby,Refactor describe to inline client calls,https://github.com/kubernetes/kubernetes/pull/135986
+135888,2025-12-22T16:04:27Z,2026-01-08T11:49:46Z,403.76,16.82,scaliby,Deduplicate client creation in describe tests,https://github.com/kubernetes/kubernetes/pull/135888
+135625,2025-12-05T14:53:09Z,2026-01-08T11:49:38Z,812.94,33.87,atiratree,mark QuotaMonitor as not running and invalidate monitors list,https://github.com/kubernetes/kubernetes/pull/135625
+134162,2025-09-19T14:40:29Z,2026-01-08T07:51:38Z,2657.19,110.72,zeqian-meng,Upgrade Debian and NPB for npb-ep e2e test,https://github.com/kubernetes/kubernetes/pull/134162
+135377,2025-11-20T19:46:54Z,2026-01-07T21:31:47Z,1153.75,48.07,harche,Fix race condition in DRA health e2e test pod status update,https://github.com/kubernetes/kubernetes/pull/135377
+135363,2025-11-20T08:42:50Z,2026-01-08T06:41:39Z,1173.98,48.92,fusida,Automated cherry pick of #133721: fix panic for the crd with subresource but lose openAPIV3Schema,https://github.com/kubernetes/kubernetes/pull/135363
+136069,2026-01-07T13:26:56Z,2026-01-08T06:37:38Z,17.18,0.72,neolit123,Automated cherry pick of #135776: kubeadm: always retry Patch() Node API calls,https://github.com/kubernetes/kubernetes/pull/136069
+136070,2026-01-07T13:27:34Z,2026-01-08T01:39:39Z,12.2,0.51,neolit123,Automated cherry pick of #135776: kubeadm: always retry Patch() Node API calls,https://github.com/kubernetes/kubernetes/pull/136070
+136071,2026-01-07T13:27:52Z,2026-01-08T01:37:38Z,12.16,0.51,neolit123,Automated cherry pick of #135776: kubeadm: always retry Patch() Node API calls,https://github.com/kubernetes/kubernetes/pull/136071
+136072,2026-01-07T13:28:09Z,2026-01-08T01:37:38Z,12.16,0.51,neolit123,Automated cherry pick of #135776: kubeadm: always retry Patch() Node API calls,https://github.com/kubernetes/kubernetes/pull/136072
+136060,2026-01-06T23:06:53Z,2026-01-08T01:35:40Z,26.48,1.1,tallclair,Clean up Pod config sources: remove dead code,https://github.com/kubernetes/kubernetes/pull/136060
+135689,2025-12-10T05:53:11Z,2026-01-07T23:27:45Z,689.58,28.73,KasimVali2207,"Add stress tests for gRPC, HTTP, and TCP liveness probesAdd probe stress tests",https://github.com/kubernetes/kubernetes/pull/135689
+135189,2025-11-06T18:24:03Z,2026-01-07T23:27:38Z,1493.06,62.21,haircommander,e2e_node: update proc mount test to correctly handle baseline PSA,https://github.com/kubernetes/kubernetes/pull/135189
+136046,2026-01-06T01:20:30Z,2026-01-07T22:33:50Z,45.22,1.88,Tanner-Gladson,fix(controller/storageversionmigrator) Reduce log level,https://github.com/kubernetes/kubernetes/pull/136046
+135725,2025-12-11T19:12:50Z,2026-01-07T22:33:43Z,651.35,27.14,bart0sh,Fix extended resource handling for DRA-backed resources on pod admission,https://github.com/kubernetes/kubernetes/pull/135725
+133797,2025-08-31T03:16:42Z,2026-01-07T21:31:39Z,3114.25,129.76,tico88612,Replace apimachinery/pkg/watch.NewFake with NewFakeWithOptions in pkg/controller,https://github.com/kubernetes/kubernetes/pull/133797
+136034,2026-01-05T19:42:20Z,2026-01-07T19:33:51Z,47.86,1.99,lalitc375,Add ignoreConversionErrors option to validation testing,https://github.com/kubernetes/kubernetes/pull/136034
+135997,2026-01-02T10:13:30Z,2026-01-07T19:33:44Z,129.34,5.39,ngopalak-redhat,Add negative validation for imageMinimumGCAge,https://github.com/kubernetes/kubernetes/pull/135997
+136073,2026-01-07T14:51:09Z,2026-01-07T17:03:49Z,2.21,0.09,liggitt,Fix context timeout test flake,https://github.com/kubernetes/kubernetes/pull/136073
+136066,2026-01-07T12:58:16Z,2026-01-07T17:03:41Z,4.09,0.17,serathius,Cleanup WatchFromStorageWithoutResourceVersion feature gate,https://github.com/kubernetes/kubernetes/pull/136066
+135774,2025-12-16T16:50:46Z,2026-01-07T13:31:38Z,524.68,21.86,pohly,E2E framework: make usage of Ginkgo wrappers optional,https://github.com/kubernetes/kubernetes/pull/135774
+136068,2026-01-07T13:19:52Z,2026-01-07T15:59:48Z,2.67,0.11,aojea,fix leader election data race reading observedtime,https://github.com/kubernetes/kubernetes/pull/136068
+136067,2026-01-07T13:19:42Z,2026-01-07T15:59:40Z,2.67,0.11,dims,chore: update sig-architecture mailing list email,https://github.com/kubernetes/kubernetes/pull/136067
+135983,2025-12-31T04:26:20Z,2026-01-07T14:35:46Z,178.16,7.42,Goend,Fix the issue of slow creation of ResourceClaim in specific scenarios,https://github.com/kubernetes/kubernetes/pull/135983
+135392,2025-11-21T14:23:40Z,2026-01-07T14:35:38Z,1128.2,47.01,brejman,Fix queue hint for plugins on change to pods with nominated nodes,https://github.com/kubernetes/kubernetes/pull/135392
+135777,2025-12-16T18:24:01Z,2026-01-07T12:01:46Z,521.63,21.73,serathius,Enable WatchCacheInitializationPostStartHook by default,https://github.com/kubernetes/kubernetes/pull/135777
+132145,2025-06-06T11:58:28Z,2026-01-07T12:01:39Z,5160.05,215.0,inkel,fix(client): Concatenate string instead of using `fmt.Sprintf`,https://github.com/kubernetes/kubernetes/pull/132145
+135961,2025-12-28T09:54:05Z,2026-01-07T10:59:39Z,241.09,10.05,serathius,Move dummy testing to subpackage,https://github.com/kubernetes/kubernetes/pull/135961
+134680,2025-10-17T14:18:35Z,2026-01-06T17:09:40Z,1946.85,81.12,JoelSpeed,Enable integers rule for Kube API Linter,https://github.com/kubernetes/kubernetes/pull/134680
+135812,2025-12-18T09:04:16Z,2026-01-07T07:13:41Z,478.16,19.92,AkihiroSuda,[release-1.33] hack/lib/util.sh: support uutils' `date` command,https://github.com/kubernetes/kubernetes/pull/135812
+135810,2025-12-18T09:02:16Z,2026-01-07T06:01:37Z,476.99,19.87,AkihiroSuda,[release-1.35] hack/lib/util.sh: support uutils' `date` command,https://github.com/kubernetes/kubernetes/pull/135810
+135811,2025-12-18T09:03:16Z,2026-01-07T04:57:45Z,475.91,19.83,AkihiroSuda,[release-1.34] hack/lib/util.sh: support uutils' `date` command,https://github.com/kubernetes/kubernetes/pull/135811
+135716,2025-12-11T14:53:18Z,2026-01-07T04:57:38Z,638.07,26.59,p0lyn0mial,Automated cherry pick of #135591: downgrade reflector watchlist fallback log to V(4),https://github.com/kubernetes/kubernetes/pull/135716
+135813,2025-12-18T09:06:34Z,2026-01-07T03:35:39Z,474.48,19.77,AkihiroSuda,[release-1.32] hack/lib/util.sh: support uutils' `date` command,https://github.com/kubernetes/kubernetes/pull/135813
+135852,2025-12-19T16:43:48Z,2026-01-07T01:37:41Z,440.9,18.37,neolit123,Automated cherry pick of #135400: kubeadm: do not sort extraArgs alpha-numerically,https://github.com/kubernetes/kubernetes/pull/135852
+134798,2025-10-22T22:00:08Z,2026-01-07T00:15:37Z,1826.26,76.09,aditigupta96,apimachinery: Use informer.RunWithContext in various components,https://github.com/kubernetes/kubernetes/pull/134798
+136058,2026-01-06T20:39:31Z,2026-01-06T21:29:38Z,0.84,0.03,yongruilin,feat(validation-gen): skip generating for List objects,https://github.com/kubernetes/kubernetes/pull/136058
+134177,2025-09-20T14:36:32Z,2026-01-06T19:43:38Z,2597.12,108.21,n2h9,[apiserver] [126379]: replace call to HandleCrash with call to HandleCrashWithContext in apiserver,https://github.com/kubernetes/kubernetes/pull/134177
+134852,2025-10-24T12:12:00Z,2026-01-06T18:29:39Z,1782.29,74.26,MatteoFari,Enable nomaps rule for Kube API Linter,https://github.com/kubernetes/kubernetes/pull/134852
+136053,2026-01-06T09:49:04Z,2026-01-06T15:29:08Z,5.67,0.24,tchap,leasecandidate: Improve goroutine management,https://github.com/kubernetes/kubernetes/pull/136053
+135611,2025-12-05T10:29:19Z,2026-01-06T09:15:08Z,766.76,31.95,Karthik-K-N,Fix flake TestDeviceTaintRule test,https://github.com/kubernetes/kubernetes/pull/135611
+136037,2026-01-05T20:48:01Z,2026-01-06T05:46:38Z,8.98,0.37,pravk03,Prevent nil pointer dereference in HandlePodUpdates,https://github.com/kubernetes/kubernetes/pull/136037
+135904,2025-12-23T11:05:12Z,2026-01-06T03:08:37Z,328.06,13.67,macsko,Automated cherry pick of #135903: Disable SchedulerAsyncAPICalls feature gate due to performance issues,https://github.com/kubernetes/kubernetes/pull/135904
+135851,2025-12-19T16:43:28Z,2026-01-06T02:12:37Z,417.49,17.4,neolit123,Automated cherry pick of #135400: kubeadm: do not sort extraArgs alpha-numerically,https://github.com/kubernetes/kubernetes/pull/135851
+135853,2025-12-19T16:44:05Z,2026-01-06T02:10:38Z,417.44,17.39,neolit123,Automated cherry pick of #135400: kubeadm: do not sort extraArgs alpha-numerically,https://github.com/kubernetes/kubernetes/pull/135853
+135740,2025-12-13T09:37:49Z,2026-01-06T01:56:38Z,568.31,23.68,pohly,Automated cherry pick of #135692: local-up-cluster.sh: support more recent containerd like 2.2,https://github.com/kubernetes/kubernetes/pull/135740
+135227,2025-11-07T20:08:08Z,2026-01-05T23:54:38Z,1419.78,59.16,hime,Inverting DRAOperationsDuration metric by inverting 'is_error' label.,https://github.com/kubernetes/kubernetes/pull/135227
+130231,2025-02-18T10:12:18Z,2026-01-05T06:58:37Z,7700.77,320.87,Barakmor1,Update ImageLocality plugin to account ImageVolume images,https://github.com/kubernetes/kubernetes/pull/130231
+135148,2025-11-05T17:14:58Z,2026-01-04T13:00:37Z,1435.76,59.82,neolit123,kubeadm: add --allow-deprecated-api to 'config validate',https://github.com/kubernetes/kubernetes/pull/135148

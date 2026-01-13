@@ -1,0 +1,22 @@
+metric_name,metric_value,notes
+active_contributors,42,last 10 days
+avg_time_between_commits_hours,99.91,last 10 days
+lines_added,26406,last 10 days (sampled)
+lines_deleted,20453,last 10 days (sampled)
+bus_factor,2,contributors reaching 50% ownership
+bus_factor_ownership_percent,58.66,last 10 days
+branch_count,59,Number of branches – Parallel development complexity
+merge_frequency_merged_prs,113,Merge frequency – Integration cadence (last 10 days)
+merge_frequency_merges_per_week,79.1,last 10 days
+avg_time_between_merges_hours,1.9,last 10 days
+avg_pr_merge_lead_time_hours,635.32,Average PR merge time – Lead time for change (last 10 days)
+median_pr_merge_lead_time_hours,290.6,last 10 days
+p75_pr_merge_lead_time_hours,766.76,last 10 days
+p90_pr_merge_lead_time_hours,1705.32,last 10 days
+prs_closed,157,PRs closed (last 10 days)
+prs_merged,113,PRs merged (last 10 days)
+prs_closed_not_merged,44,PRs closed without merge (includes rejected/abandoned)
+prs_merge_rate_percent,71.97,Merged PRs / Closed PRs
+prs_reopened,3,PRs reopened at least once – Review quality signal (last 10 days; scanned 482 recently-updated PRs)
+prs_reopen_events,3,Total reopen events (last 10 days; scanned 482 recently-updated PRs)
+prs_reopen_rate_percent,1.91,Reopened PRs / Closed PRs
