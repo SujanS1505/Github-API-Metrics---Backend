@@ -1,11 +1,11 @@
 from datetime import datetime
 from requests.exceptions import HTTPError
 
-MAX_PAGES = 40          # Safety limit 
+MAX_PAGES = 40          # Safety limit
 PER_PAGE = 100
 
 
-def fetch_all_issues(client, owner, repo, state="all"):
+def fetch_all_issues(client, owner, repo, state="all", max_pages=MAX_PAGES, per_page=PER_PAGE):
     """
     Fetch all issues (excluding PRs) from a GitHub repo.
     Handles pagination limits for large repositories.
@@ -19,7 +19,7 @@ def fetch_all_issues(client, owner, repo, state="all"):
                 f"/repos/{owner}/{repo}/issues",
                 params={
                     "state": state,
-                    "per_page": PER_PAGE,
+                    "per_page": per_page,
                     "page": page
                 }
             )
@@ -40,8 +40,8 @@ def fetch_all_issues(client, owner, repo, state="all"):
 
         page += 1
 
-        if page > MAX_PAGES:
-            print(f"Reached max page limit ({MAX_PAGES}), stopping early.")
+        if page > max_pages:
+            print(f"Reached max page limit ({max_pages}), stopping early.")
             break
 
     return issues

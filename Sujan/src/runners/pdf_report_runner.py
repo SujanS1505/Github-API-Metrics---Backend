@@ -1,15 +1,13 @@
-from reports.pdf_report_generator import generate_pdf_report
+from api.repo_metadata import fetch_repo_metadata
+from runners.repo_metrics_collector import collect_repo_metrics
+from reports.pdf_report_generator import generate_repo_pdf
 
 
-def run_pdf_report():
-    csv_files = {
-        "Issue Summary Metrics": "reports/issue_summary_metrics.csv",
-        "Issue Sprint Throughput": "reports/issue_sprint_throughput.csv",
-        "Code Quality Metrics": "reports/code_quality_summary.csv",
-        "Security & Compliance Metrics": "reports/security_compliance_metrics.csv",
-    }
+def run_pdf_report(client, owner, repo):
+    repo_meta = fetch_repo_metadata(client, owner, repo)
+    metrics = collect_repo_metrics(client, owner, repo)
 
-    output_pdf = "reports/github_metrics_report.pdf"
-    generate_pdf_report(csv_files, output_pdf)
+    output_pdf = f"reports/{owner}_{repo}_metrics_report.pdf"
+    generate_repo_pdf(repo_meta, metrics, output_pdf)
 
-    print(f"\n📄 PDF report generated: {output_pdf}")
+    print(f"\n📄 Repo-specific PDF generated: {output_pdf}")

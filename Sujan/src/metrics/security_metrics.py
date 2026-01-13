@@ -49,3 +49,28 @@ def protected_branches_count(client, owner, repo, branches):
             continue
 
     return protected
+
+
+from datetime import datetime
+
+
+def average_remediation_time(alerts):
+    """
+    Calculate average remediation time (in days) for fixed Dependabot alerts.
+    Returns None if no fixed alerts exist.
+    """
+    durations = []
+
+    for alert in alerts:
+        created = alert.get("created_at")
+        fixed = alert.get("fixed_at")
+
+        if created and fixed:
+            created_dt = datetime.strptime(created, "%Y-%m-%dT%H:%M:%SZ")
+            fixed_dt = datetime.strptime(fixed, "%Y-%m-%dT%H:%M:%SZ")
+            durations.append((fixed_dt - created_dt).days)
+
+    if not durations:
+        return None
+
+    return round(sum(durations) / len(durations), 2)

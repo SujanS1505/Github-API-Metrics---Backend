@@ -1,6 +1,8 @@
 from datetime import datetime, timedelta
 from collections import Counter
 
+from api import issues
+
 
 def open_closed_ratio(issues):
     open_issues = sum(1 for i in issues if i["state"] == "open")
@@ -61,14 +63,29 @@ def issues_created_vs_closed_per_sprint(
     Calculates number of issues created and closed per sprint.
     """
 
+    if not issues:
+        return {
+            "created": {},
+            "closed": {},
+        }
+
     if sprint_start_date is None:
-        sprint_start_date = min(i["created_at"] for i in issues if i["created_at"])
+        valid_dates = [i["created_at"] for i in issues if i.get("created_at")]
+        if not valid_dates:
+            return {
+                "created": {},
+                "closed": {},
+            }
+        sprint_start_date = min(valid_dates)
 
     created = Counter()
     closed = Counter()
 
     for issue in issues:
         # CREATED
+        if not issue.get("created_at"):
+            continue
+
         days_since_start = (issue["created_at"] - sprint_start_date).days
         sprint_index = days_since_start // sprint_days
         sprint_start = sprint_start_date + timedelta(days=sprint_index * sprint_days)

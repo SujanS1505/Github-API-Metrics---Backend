@@ -42,9 +42,10 @@ def main():
     if args.mode in ("security", "all"):
         run_security_metrics(client, owner, repo)
 
-    if args.mode == "pdf":
+    elif args.mode == "pdf":
         from runners.pdf_report_runner import run_pdf_report
-        run_pdf_report()
+        run_pdf_report(client, owner, repo)
+
 
 
 

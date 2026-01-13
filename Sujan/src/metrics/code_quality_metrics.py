@@ -70,3 +70,15 @@ def find_stale_files(commit_dates, stale_days=180):
             stale.append(file)
 
     return stale
+
+
+def identify_hotspots(code_churn, churn_threshold=50):
+    """
+    Identify hotspot files based on churn threshold.
+    """
+    return {
+        file: churn
+        for file, churn in code_churn.items()
+        if churn >= churn_threshold
+    }
+
