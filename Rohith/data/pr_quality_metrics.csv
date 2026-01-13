@@ -1,0 +1,11 @@
+metric_name,metric_value,notes
+prs_scanned,149,PRs created in last 10 days
+prs_non_draft,142,Draft PRs excluded from most calculations
+review_turnaround_avg_hours,17.62,createdAt -> first non-author review submitted (draft PRs excluded)
+review_turnaround_median_hours,5.84,Median turnaround (hours)
+avg_reviewers_per_pr,0.75,Distinct reviewers who submitted a review
+avg_pr_loc_changed,504.14,additions + deletions
+median_pr_loc_changed,40.0,Median additions + deletions
+avg_pr_total_comments,7.9,issue comments + review thread count (proxy)
+approval_rate_percent,20.00,Merged PRs with >=1 approval / merged PRs
+merged_prs_count,50,Non-draft PRs created in window that were merged

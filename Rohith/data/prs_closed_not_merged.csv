@@ -1,0 +1,45 @@
+number,created_at,closed_at,author,title,url
+135935,2025-12-26T05:26:37Z,2026-01-13T05:09:34Z,darthsuburbus,[DO NOT REVIEW] Network Tag CIDR Declarative Validation ,https://github.com/kubernetes/kubernetes/pull/135935
+136187,2026-01-13T03:34:45Z,2026-01-13T03:47:06Z,blaze27444,Rename main.go to main.gos,https://github.com/kubernetes/kubernetes/pull/136187
+135913,2025-12-23T14:38:10Z,2026-01-12T17:52:10Z,singh1203,Migrate FlowControl (`flowcontrol.apiserver.k8s.io`) to Declarative Validation,https://github.com/kubernetes/kubernetes/pull/135913
+136177,2026-01-12T16:13:17Z,2026-01-12T17:54:20Z,enj,Test KMS CI,https://github.com/kubernetes/kubernetes/pull/136177
+136146,2026-01-10T05:12:09Z,2026-01-12T15:50:37Z,MohammedMutee,kubeadm: fix wait-control-plane using load balancer instead of local endpoint,https://github.com/kubernetes/kubernetes/pull/136146
+136150,2026-01-10T14:47:30Z,2026-01-12T07:09:16Z,pohly,ktesting: don't install signals automatically,https://github.com/kubernetes/kubernetes/pull/136150
+136137,2026-01-09T14:01:26Z,2026-01-12T04:21:56Z,vikasbolla,Ignore conversion errors in versioned validation fuzz test,https://github.com/kubernetes/kubernetes/pull/136137
+133465,2025-08-11T12:58:11Z,2026-01-12T01:42:25Z,xigang,kubelet: ensure static pods terminate last during node shutdown,https://github.com/kubernetes/kubernetes/pull/133465
+136129,2026-01-09T09:37:39Z,2026-01-12T01:38:39Z,pacoxu,"[Testing]Revert ""DRA e2e: upgrade/downgrade refactor""",https://github.com/kubernetes/kubernetes/pull/136129
+133414,2025-08-07T07:04:02Z,2026-01-11T21:38:24Z,fusida,fix set caching objects log typo,https://github.com/kubernetes/kubernetes/pull/133414
+135849,2025-12-19T15:35:11Z,2026-01-11T16:35:07Z,kfess,Add linkCode and linkKEPs fields to match the markdown output,https://github.com/kubernetes/kubernetes/pull/135849
+136153,2026-01-11T07:00:20Z,2026-01-11T09:52:09Z,MohammedMutee,"Revert ""Use ktesting in e2e framework"" and remove incompatible tests to fix CI",https://github.com/kubernetes/kubernetes/pull/136153
+136125,2026-01-09T06:47:06Z,2026-01-10T13:16:54Z,MohammedMutee,[GCE] Pin Ubuntu image to 22.04 to fix ci-cos-containerd-e2e-ubuntu-gce,https://github.com/kubernetes/kubernetes/pull/136125
+135286,2025-11-13T09:53:35Z,2026-01-10T05:40:41Z,ShaanveerS,Enable Declarative Validation for Role,https://github.com/kubernetes/kubernetes/pull/135286
+135780,2025-12-16T21:41:34Z,2026-01-10T00:13:00Z,techknowlogick,client-go: migrate websocket code to use coder/websocket,https://github.com/kubernetes/kubernetes/pull/135780
+136139,2026-01-09T14:41:46Z,2026-01-09T20:05:51Z,aroradaman,nftables: remove redundant protocol check in endpoint chains,https://github.com/kubernetes/kubernetes/pull/136139
+136109,2026-01-08T16:07:17Z,2026-01-09T12:25:42Z,aojea,Default EndpointSlice.Endpoints to empty list instead of nil,https://github.com/kubernetes/kubernetes/pull/136109
+136017,2026-01-04T11:53:34Z,2026-01-09T12:19:17Z,nohy6630,kube-aggregator: Generate NewClientset for fake clientset,https://github.com/kubernetes/kubernetes/pull/136017
+136133,2026-01-09T11:33:45Z,2026-01-09T11:39:21Z,ardaguclu,kubectl exec: Fail if COMMAND is passed after resource,https://github.com/kubernetes/kubernetes/pull/136133
+135521,2025-11-30T14:06:37Z,2026-01-08T14:40:47Z,iamrajiv,fix(e2e): Fix HPA CPU test flake by using dynamic stability check range,https://github.com/kubernetes/kubernetes/pull/135521
+135695,2025-12-10T09:06:55Z,2026-01-08T12:17:21Z,tsj-30,Wait for ResourceSlices before scheduling extended resources,https://github.com/kubernetes/kubernetes/pull/135695
+135967,2025-12-28T19:50:26Z,2026-01-08T12:07:54Z,kannon92,enable bug fix feature gate to combat flake,https://github.com/kubernetes/kubernetes/pull/135967
+133458,2025-08-10T17:09:00Z,2026-01-08T11:49:12Z,BS14,fix/updated-node-perf-nbp-eb baseimage to trixie-slim,https://github.com/kubernetes/kubernetes/pull/133458
+134435,2025-10-06T10:24:38Z,2026-01-07T16:10:51Z,sats-23,WIP: Queueinghint test on master ,https://github.com/kubernetes/kubernetes/pull/134435
+134504,2025-10-09T13:28:10Z,2026-01-07T16:10:20Z,sats-23,WIP: Affinity test on 1.33,https://github.com/kubernetes/kubernetes/pull/134504
+134436,2025-10-06T10:26:04Z,2026-01-07T16:10:14Z,sats-23,WIP: Queueinghint test on 1.34,https://github.com/kubernetes/kubernetes/pull/134436
+135014,2025-10-31T18:41:41Z,2026-01-07T12:29:29Z,ipochi,Update KAS apiserver network proxy to v0.34,https://github.com/kubernetes/kubernetes/pull/135014
+135707,2025-12-10T21:34:46Z,2026-01-06T19:03:08Z,Jkhall81,DRA API: add fuzz testing for conversion roundtripping,https://github.com/kubernetes/kubernetes/pull/135707
+127819,2024-10-02T19:35:51Z,2026-01-07T07:44:07Z,MadVikingGod,Increase test coverage for kubelet - pod container manager,https://github.com/kubernetes/kubernetes/pull/127819
+135885,2025-12-22T06:19:12Z,2026-01-07T05:25:05Z,vikasbolla,Normalize RuntimeClass handler paths for list validation,https://github.com/kubernetes/kubernetes/pull/135885
+135378,2025-11-20T21:36:00Z,2026-01-06T23:41:35Z,Jefftree,Bump binary version to 1.36,https://github.com/kubernetes/kubernetes/pull/135378
+135781,2025-12-17T01:16:37Z,2026-01-06T19:03:08Z,Jkhall81,Enable declarative validation for FlowSchema,https://github.com/kubernetes/kubernetes/pull/135781
+135596,2025-12-04T22:34:31Z,2026-01-06T19:03:08Z,Jkhall81,Enable declarative validation for CronJob,https://github.com/kubernetes/kubernetes/pull/135596
+135308,2025-11-14T13:46:53Z,2026-01-06T12:06:41Z,EatRawLife,pkg/controller/controller_utils.go : replace HandleError with HandleE…,https://github.com/kubernetes/kubernetes/pull/135308
+135307,2025-11-14T12:41:08Z,2026-01-06T10:15:18Z,moonilgwang,pkg/apis/admissionregistration/validation: use HandleErrorWithContext in createCompiler,https://github.com/kubernetes/kubernetes/pull/135307
+136024,2026-01-05T05:57:12Z,2026-01-05T17:14:57Z,chrnorm,feat(client-go): add CA certificate hot-reload support,https://github.com/kubernetes/kubernetes/pull/136024
+135477,2025-11-27T08:30:10Z,2026-01-05T10:04:28Z,adrianmoisey,KEP-5311 - Revert RelaxedServiceNameValidation promote to beta,https://github.com/kubernetes/kubernetes/pull/135477
+135999,2026-01-02T15:13:09Z,2026-01-05T09:32:00Z,ngopalak-redhat,Fix time check in GC and small optimization for image_gc_manager,https://github.com/kubernetes/kubernetes/pull/135999
+136018,2026-01-04T12:11:52Z,2026-01-05T07:16:40Z,kkkkun,fix kubelet panic when allcoate gpu parallelly,https://github.com/kubernetes/kubernetes/pull/136018
+132591,2025-06-27T23:26:56Z,2026-01-04T21:12:16Z,shumiao,Annotate LimitRangeSpec.Limits to be optional,https://github.com/kubernetes/kubernetes/pull/132591
+133238,2025-07-26T22:14:52Z,2026-01-04T21:12:15Z,tamalsaha,Preserve string form if the original value can be fully represented,https://github.com/kubernetes/kubernetes/pull/133238
+135936,2025-12-26T08:51:55Z,2026-01-04T03:18:31Z,Chunxia202410,[WIP][FG:InPlacePodVerticalScaling] Configurable CPU Scale Down Delay,https://github.com/kubernetes/kubernetes/pull/135936
+133036,2025-07-17T16:19:14Z,2026-01-04T07:09:15Z,skitt,Generic client-go store,https://github.com/kubernetes/kubernetes/pull/133036
+135618,2025-12-05T12:12:59Z,2026-01-04T01:56:29Z,yshngg,fix(kubelet): remove redundant makeEventRecorder,https://github.com/kubernetes/kubernetes/pull/135618
