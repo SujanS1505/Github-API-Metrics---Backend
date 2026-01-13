@@ -1,27 +1,27 @@
 from requests.exceptions import HTTPError
 
 
-def fetch_dependabot_alerts(client, owner, repo, state="open"):
+def fetch_dependabot_alerts(client, owner, repo):
     """
-    Fetch Dependabot alerts if enabled
+    Fetch Dependabot alerts.
+
+    NOTE:
+    - Dependabot Alerts API does NOT reliably support query params
+      (state, pagination) for fine-grained tokens.
+    - GitHub returns all OPEN alerts by default.
     """
-    alerts = []
-    page = 1
 
-    while True:
-        try:
-            response = client.get(
-                f"/repos/{owner}/{repo}/dependabot/alerts",
-                params={"state": state, "per_page": 100, "page": page}
-            )
-        except HTTPError as e:
-            print("Dependabot alerts not accessible:", e)
-            break
+    try:
+        alerts = client.get(
+            f"/repos/{owner}/{repo}/dependabot/alerts"
+        )
 
-        if not response:
-            break
+        # GitHub returns a list
+        if not alerts:
+            return []
 
-        alerts.extend(response)
-        page += 1
+        return alerts
 
-    return alerts
+    except HTTPError as e:
+        print("Dependabot alerts not accessible:", e)
+        return []

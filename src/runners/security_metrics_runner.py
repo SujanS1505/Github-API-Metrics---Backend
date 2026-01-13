@@ -13,7 +13,7 @@ def run_security_metrics(client, owner, repo):
     print("\n SECURITY & COMPLIANCE METRICS")
 
     # Dependabot alerts
-    alerts = fetch_dependabot_alerts(client, owner, repo, state="open")
+    alerts = fetch_dependabot_alerts(client, owner, repo)
     open_alerts = open_security_alerts(alerts)
     avg_fix_time = average_remediation_time_days(alerts)
 
