@@ -5,7 +5,6 @@ from runners.code_quality_runner import run_code_quality_metrics
 from runners.security_metrics_runner import run_security_metrics
 
 
-
 def main():
     parser = argparse.ArgumentParser(description="GitHub Metrics Backend")
     parser.add_argument(
