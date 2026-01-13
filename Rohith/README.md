@@ -1,31 +1,13 @@
-# GitHub Repo Activity Metrics
+1.Create Local Config File
+Create this file (it is NOT stored in GitHub):
+Rohith/config.py
+Add:
+import os
+GITHUB_TOKEN = os.getenv("GITHUB_TOKEN")
+OWNER = "Kubernetes"
+REPO = "kubernetes"
+DAYS = 10
 
-This workspace exports repository activity metrics to CSV files in `./data`.
 
-## Setup
-
-1. Create a GitHub token with access to the repo.
-2. Set environment variables:
-
-```powershell
-$env:GITHUB_TOKEN = "<token>"
-$env:OWNER = "<org-or-user>"
-$env:REPO = "<repo-name>"
-```
-
-3. Install dependencies:
-
-```powershell
-python -m pip install -r requirements.txt
-```
-
-## Run
-
-```powershell
-python run_metrics.py
-```
-
-Outputs:
-- `data/repository_activity_metrics.csv`
-- `data/commit_frequency_by_author.csv`
-- `data/commits_time_distribution.csv`
+2.Install Dependencies
+pip install -r requirements.txt
