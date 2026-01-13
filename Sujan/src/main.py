@@ -15,9 +15,10 @@ def main():
     parser.add_argument(
         "--mode",
         required=True,
-        choices=["issues", "code-quality","security", "all"],
+        choices=["issues", "code-quality","security", "all", "pdf"],
         help="Which metrics to run"
     )
+
 
     args = parser.parse_args()
     owner, repo = args.repo.split("/")
@@ -40,6 +41,11 @@ def main():
 
     if args.mode in ("security", "all"):
         run_security_metrics(client, owner, repo)
+
+    if args.mode == "pdf":
+        from runners.pdf_report_runner import run_pdf_report
+        run_pdf_report()
+
 
 
 if __name__ == "__main__":
