@@ -47,6 +47,35 @@ def fetch_all_issues(client, owner, repo, state="all", max_pages=MAX_PAGES, per_
     return issues
 
 
+def fetch_issue_events(client, owner, repo, issue_number, per_page=100, max_pages=1):
+    """Fetch issue events (used for reopen-rate calculation).
+
+    Notes:
+    - This uses the Issues Events API.
+    - Keep max_pages small to avoid excessive API calls.
+    """
+    events = []
+    page = 1
+
+    while page <= max_pages:
+        try:
+            response = client.get(
+                f"/repos/{owner}/{repo}/issues/{issue_number}/events",
+                params={"per_page": per_page, "page": page},
+            )
+        except HTTPError as e:
+            print(f"Stopping events fetch for issue #{issue_number} at page {page}: {e}")
+            break
+
+        if not response:
+            break
+
+        events.extend(response)
+        page += 1
+
+    return events
+
+
 def normalize_issue(issue):
     return {
         "id": issue["id"],

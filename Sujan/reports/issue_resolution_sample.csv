@@ -1,0 +1,31 @@
+issue_number,title,created_at,closed_at,resolution_days,author,labels
+58491,Grid View Tooltip/Hover disappears automatically,2025-11-19,2026-01-13,55,waltervillarreal,kind:bug; area:core; area:UI; needs-triage
+58552,apache-airflow-providers-keycloak==0.3.0|0.4.0 redirects to 127.0.0.1:8080 after a successfull login,2025-11-21,2026-01-09,48,gbonazzoli,kind:bug; stale; area:providers; pending-response; area:auth; area:core; provider:keycloak
+58693,retries: 0 settings on task ignored,2025-11-25,2026-01-06,41,matthieuauger,kind:bug; area:core; affected_version:3.1
+58796,KubernetesPodOperator do_xcom_push=True and deferrable=True does not push return_value to xcom,2025-11-28,2026-01-05,38,yovio-rca,kind:bug; area:providers; provider:cncf-kubernetes; needs-triage
+58808,CloudSqlDatabaseHook wrong error message on missing host (public IP),2025-11-28,2026-01-04,37,pierresegonne,kind:bug; provider:google; area:providers; area:core; needs-triage
+58928,TriggerDagRunOperator: button Triggered DAG not shown,2025-12-02,2026-01-07,36,anavrotski,kind:bug; good first issue; area:core; area:UI
+58995,Import timeouts not visible in UI,2025-12-03,2026-01-06,34,mikoloay,kind:bug; good first issue; area:core; area:UI
+59309,UI E2E Test || DAGRUNS-001: Verify all DAG runs display,2025-12-11,2026-01-13,33,vatsrahul1001,kind:feature; good first issue; area:UI; needs-triage
+59342,Conflicting manually triggered DAG's run IDs,2025-12-11,2026-01-13,32,amit-mittal,kind:bug; area:API; area:core; needs-triage
+59366,Kubernetes Pod Operator Callbacks progress_callbacks repeat same line,2025-12-12,2026-01-08,27,johnhoran,kind:bug; area:providers; provider:cncf-kubernetes; needs-triage
+59286,Keycloak: token via client_credentials flow,2025-12-10,2026-01-05,25,ecodina,kind:feature; area:auth; needs-triage
+58771,Issues with task's logs display in AirflowUI,2025-11-27,2025-12-22,25,dkondidatov,kind:bug; area:core; area:UI
+59348,`ApprovalOperator(assigned_users=...)` unusable with `SimpleAuthManager` when `simple_auth_manager_all_admins=True` (no ,2025-12-12,2026-01-05,24,zachliu,kind:bug; good first issue; area:auth; area:core
+58667,Standalone DAG Processor seems unstable,2025-11-25,2025-12-19,24,coenvd,kind:bug; good first issue; area:core; affected_version:3.1
+59684,UI E2E Test || DAG-014: Verify DAG audit log,2025-12-21,2026-01-13,23,vatsrahul1001,kind:feature; good first issue; area:UI
+59465,S3DagBundle causes continuous DAG version increments despite no code changes,2025-12-15,2026-01-07,23,marcosmartinezfco,kind:bug; provider:amazon; area:serialization; area:core; needs-triage
+59259,"Status of testing Providers that were prepared on December 09, 2025",2025-12-09,2026-01-02,23,potiuk,area:providers; kind:meta
+58965,Debug logs of tasks are not logged even when logging level is set to DEBUG,2025-12-02,2025-12-26,23,deepak4babu,kind:bug; area:logging; area:core; needs-triage
+59563,AirflowProviderDeprecationWarning: Configuration 'namespace' is deprecated.,2025-12-17,2026-01-09,22,kosteev,kind:bug; area:providers; good first issue; provider:cncf-kubernetes
+59556,"Warnings from cncf-kubernetes provider ""The '*' option in section kubernetes_executor is deprecated. This configuration ",2025-12-17,2026-01-09,22,kosteev,kind:bug; area:providers; provider:cncf-kubernetes
+59497,Delete dag run endpoint returns 204 even if run could not be deleted,2025-12-16,2026-01-07,22,DataCerealz,kind:bug; area:API; good first issue; area:core
+58487,Translation keys are incorrectly sorted after running `--add-missing`,2025-11-19,2025-12-12,22,choo121600,area:dev-tools; kind:feature; area:translations
+59553,AIRFLOW__SCHEDULER__TASK_QUEUED_TIMEOUT configuration ignored,2025-12-17,2026-01-07,21,CreeperBeatz,kind:bug; area:Scheduler; area:core; affected_version:3.1
+59370,Add on_task_instance_skipped listener hookspec,2025-12-12,2026-01-03,21,tstrilka,kind:feature; needs-triage; area:Listeners
+59475,Directions for configuring SSO with OAuth are unclear,2025-12-15,2026-01-05,20,bgshacklett,kind:bug; area:webserver; good first issue; kind:documentation; area:auth
+59229,"Switch to newer OpenApi generator (7.18.0) and add auto-upgrade open-api when ""ci upgrade"" is run",2025-12-09,2025-12-29,20,potiuk,area:dev-env; good first issue
+59637,airflow.sdk.api.client.ServerResponseError: Invalid auth token: Signature has expired,2025-12-19,2026-01-07,19,devgonvarun,kind:bug; area:API; area:auth; area:core; needs-triage
+59571,[helm-chart] 1.16.0: Cannot add custom volumeClaimTemplates to workers,2025-12-17,2026-01-05,19,m4dm4rtig4n,kind:bug; area:helm-chart
+59593,UI E2E test || DAG-012: Create backfill with all reprocess behaviour,2025-12-18,2026-01-06,18,vatsrahul1001,kind:feature; good first issue; area:UI; area:backfill
+59380,[Airflow 3.x] AIRFLOW__EMAIL__DEFAULT_EMAIL_ON_FAILURE config exists but is not read by SDK,2025-12-13,2025-12-31,18,erinforman,kind:bug; area:core

@@ -103,4 +103,19 @@ def run_code_quality_metrics(client, owner, repo):
         headers=["file_path", "code_churn", "commit_count"]
     )
 
+    # Stale files (details)
+    stale_rows = []
+    for file_path in sorted(stale_files):
+        last_date = commit_dates.get(file_path)
+        stale_rows.append([
+            file_path,
+            last_date.strftime("%Y-%m-%d") if last_date else "",
+        ])
+
+    write_time_series_csv(
+        f"{REPORT_DIR}/stale_files.csv",
+        stale_rows,
+        headers=["file_path", "last_commit_date"],
+    )
+
     print("✅ Code quality CSV reports generated")

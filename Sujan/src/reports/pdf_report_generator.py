@@ -148,6 +148,29 @@ def _add_issues_section(elements, styles, report_dir, sprint_max_rows=100):
     elements.append(simple_table(_key_value_rows(issue_summary)))
     elements.append(Spacer(1, 10))
 
+    # Metric metadata (definitions + calculation notes)
+    elements.append(Paragraph("Metric metadata", styles["Heading3"]))
+    elements.append(Paragraph(
+        "Open vs Closed Issues Ratio (Backlog health): open / (open + closed)",
+        styles["BodyText"],
+    ))
+    elements.append(Paragraph(
+        "Average Issue Resolution Time (Delivery efficiency): average days from created_at to closed_at for closed issues.",
+        styles["BodyText"],
+    ))
+    elements.append(Paragraph(
+        "Issue Reopen Rate (Requirement clarity): % of sampled recent issues with at least one 'reopened' event (Issues Events API).",
+        styles["BodyText"],
+    ))
+    elements.append(Paragraph(
+        "Bug vs Feature Ratio (Product stability): bug-labeled issues / feature-labeled issues (supports labels like 'kind:bug').",
+        styles["BodyText"],
+    ))
+    elements.append(Paragraph(
+        "Issues Created vs Closed per Sprint (Throughput consistency): counts grouped by 14-day sprints starting at earliest created_at in the fetched set.",
+        styles["BodyText"],
+    ))
+
     open_issues = _to_number(issue_summary.get("open_issues")) or 0
     closed_issues = _to_number(issue_summary.get("closed_issues")) or 0
     total_issues = open_issues + closed_issues
@@ -157,6 +180,72 @@ def _add_issues_section(elements, styles, report_dir, sprint_max_rows=100):
             styles["Normal"],
         )
     )
+
+    # Detailed: Open issues sample (20-30 rows)
+    open_sample_path = f"{report_dir}/issues_open_sample.csv"
+    open_rows = read_csv_as_dicts(open_sample_path)
+    if open_rows:
+        elements.append(Spacer(1, 10))
+        elements.append(Paragraph("Open Issues (Oldest sample)", styles["Heading3"]))
+        table_rows = [["#", "Title", "Created", "Age (days)", "Comments", "Author"]]
+        for r in open_rows[:30]:
+            table_rows.append([
+                r.get("issue_number", ""),
+                Paragraph(str(r.get("title", "")), styles["BodyText"]),
+                r.get("created_at", ""),
+                r.get("age_days", ""),
+                r.get("comments", ""),
+                r.get("author", ""),
+            ])
+        elements.append(simple_table(
+            table_rows,
+            col_widths=[35, 260, 60, 55, 45, 65],
+            font_size=7,
+            header_font_size=8,
+        ))
+
+    # Detailed: Resolution time sample (20-30 rows)
+    resolution_path = f"{report_dir}/issue_resolution_sample.csv"
+    resolution_rows = read_csv_as_dicts(resolution_path)
+    if resolution_rows:
+        elements.append(Spacer(1, 10))
+        elements.append(Paragraph("Issue Resolution Time (Longest sample)", styles["Heading3"]))
+        table_rows = [["#", "Title", "Created", "Closed", "Resolution (days)"]]
+        for r in resolution_rows[:30]:
+            table_rows.append([
+                r.get("issue_number", ""),
+                Paragraph(str(r.get("title", "")), styles["BodyText"]),
+                r.get("created_at", ""),
+                r.get("closed_at", ""),
+                r.get("resolution_days", ""),
+            ])
+        elements.append(simple_table(
+            table_rows,
+            col_widths=[35, 300, 60, 60, 65],
+            font_size=7,
+            header_font_size=8,
+        ))
+
+    # Detailed: Reopen rate sample (20-30 rows)
+    reopen_path = f"{report_dir}/issue_reopen_sample.csv"
+    reopen_rows = read_csv_as_dicts(reopen_path)
+    if reopen_rows:
+        elements.append(Spacer(1, 10))
+        elements.append(Paragraph("Issue Reopen Rate (Recent sample)", styles["Heading3"]))
+        table_rows = [["#", "State", "Reopens", "Last Reopened"]]
+        for r in reopen_rows[:30]:
+            table_rows.append([
+                r.get("issue_number", ""),
+                r.get("state", ""),
+                r.get("reopen_count", ""),
+                r.get("last_reopened_at", ""),
+            ])
+        elements.append(simple_table(
+            table_rows,
+            col_widths=[60, 70, 55, 250],
+            font_size=8,
+            header_font_size=9,
+        ))
 
     throughput_path = f"{report_dir}/issue_sprint_throughput.csv"
     throughput_rows = read_csv_as_dicts(throughput_path)
@@ -265,6 +354,25 @@ def _add_code_quality_section(elements, styles, report_dir, top_n):
     else:
         elements.append(Paragraph("No hotspot files found (per current thresholds).", styles["Normal"]))
 
+    # Stale files details (20-30 rows)
+    stale_path = f"{report_dir}/stale_files.csv"
+    stale_rows = read_csv_as_dicts(stale_path)
+    if stale_rows:
+        elements.append(Spacer(1, 14))
+        elements.append(Paragraph("Stale Files (No recent commits)", styles["Heading3"]))
+        table_rows = [["File", "Last Commit"]]
+        for r in stale_rows[:30]:
+            table_rows.append([
+                Paragraph(str(r.get("file_path", "")), styles["BodyText"]),
+                r.get("last_commit_date", ""),
+            ])
+        elements.append(simple_table(
+            table_rows,
+            col_widths=[420, 90],
+            font_size=7,
+            header_font_size=8,
+        ))
+
 
 def _add_security_section(elements, styles, report_dir):
     sec_summary_path = f"{report_dir}/security_compliance_metrics.csv"
@@ -279,6 +387,89 @@ def _add_security_section(elements, styles, report_dir):
                 styles["Normal"],
             )
         )
+
+    # Metric metadata
+    elements.append(Spacer(1, 10))
+    elements.append(Paragraph("Metric metadata", styles["Heading3"]))
+    elements.append(Paragraph(
+        "Open security alerts (Dependabot): count of open alerts returned by the Dependabot Alerts API.",
+        styles["BodyText"],
+    ))
+    elements.append(Paragraph(
+        "Time to remediate vulnerabilities: average days between created_at and fixed_at for fixed alerts (if available).",
+        styles["BodyText"],
+    ))
+    elements.append(Paragraph(
+        "Signed commits percentage: % of recent commits whose verification.verified == true.",
+        styles["BodyText"],
+    ))
+    elements.append(Paragraph(
+        "Protected branches count: number of branches where the branch protection endpoint returns data.",
+        styles["BodyText"],
+    ))
+
+    # Detailed: Dependabot alerts sample (20-30 rows)
+    alerts_path = f"{report_dir}/security_alerts_sample.csv"
+    alert_rows = read_csv_as_dicts(alerts_path)
+    if alert_rows:
+        elements.append(Spacer(1, 10))
+        elements.append(Paragraph("Dependabot Alerts (Sample)", styles["Heading3"]))
+        table_rows = [["#", "Severity", "Package", "Created", "Fixed", "State"]]
+        for r in alert_rows[:30]:
+            table_rows.append([
+                r.get("alert_number", ""),
+                r.get("severity", ""),
+                Paragraph(str(r.get("package", "")), styles["BodyText"]),
+                r.get("created_at", ""),
+                r.get("fixed_at", ""),
+                r.get("state", ""),
+            ])
+        elements.append(simple_table(
+            table_rows,
+            col_widths=[40, 55, 190, 80, 80, 55],
+            font_size=7,
+            header_font_size=8,
+        ))
+
+    # Detailed: Signed commits sample (20-30 rows)
+    signed_path = f"{report_dir}/signed_commits_sample.csv"
+    signed_rows = read_csv_as_dicts(signed_path)
+    if signed_rows:
+        elements.append(Spacer(1, 10))
+        elements.append(Paragraph("Signed Commits (Sample)", styles["Heading3"]))
+        table_rows = [["SHA", "Date", "Author", "Verified"]]
+        for r in signed_rows[:30]:
+            table_rows.append([
+                r.get("sha", ""),
+                r.get("date", ""),
+                Paragraph(str(r.get("author", "")), styles["BodyText"]),
+                r.get("verified", ""),
+            ])
+        elements.append(simple_table(
+            table_rows,
+            col_widths=[60, 170, 220, 60],
+            font_size=7,
+            header_font_size=8,
+        ))
+
+    # Detailed: Branch protection sample (20-30 rows)
+    bp_path = f"{report_dir}/branch_protection_sample.csv"
+    bp_rows = read_csv_as_dicts(bp_path)
+    if bp_rows:
+        elements.append(Spacer(1, 10))
+        elements.append(Paragraph("Branch Protection (Sample)", styles["Heading3"]))
+        table_rows = [["Branch", "Protected"]]
+        for r in bp_rows[:30]:
+            table_rows.append([
+                Paragraph(str(r.get("branch", "")), styles["BodyText"]),
+                r.get("protected", ""),
+            ])
+        elements.append(simple_table(
+            table_rows,
+            col_widths=[420, 90],
+            font_size=7,
+            header_font_size=8,
+        ))
 
 
 def generate_repo_pdf_from_csv(repo_meta, report_dir, output_pdf, top_n=25):

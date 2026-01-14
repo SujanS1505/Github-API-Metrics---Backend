@@ -1,0 +1,31 @@
+issue_number,state,reopen_count,last_reopened_at,created_at,closed_at,labels
+60540,open,0,,2026-01-14,,good first issue; kind:meta
+60535,open,0,,2026-01-14,,kind:bug; provider:google; area:providers; needs-triage
+60527,open,0,,2026-01-14,,kind:bug; area:Scheduler; area:providers; provider:cncf-kubernetes; needs-triage
+60521,open,0,,2026-01-14,,kind:bug; kind:feature; area:core; area:UI; needs-triage
+60520,open,0,,2026-01-14,,kind:bug; kind:feature; area:core; area:UI; needs-triage
+60517,open,0,,2026-01-14,,kind:bug; area:core; area:Triggerer; needs-triage
+60515,open,0,,2026-01-14,,kind:feature; area:UI; AIP-38
+60512,open,0,,2026-01-14,,kind:bug; area:core; area:UI; area:backfill; needs-triage
+60500,open,0,,2026-01-14,,kind:bug; area:helm-chart; needs-triage
+60496,open,0,,2026-01-14,,area:providers; kind:meta
+60495,open,0,,2026-01-13,,kind:bug; area:providers; provider:cncf-kubernetes; needs-triage
+60484,open,0,,2026-01-13,,kind:feature; area:API; needs-triage
+60478,open,0,,2026-01-13,,kind:bug; area:API; kind:documentation; needs-triage
+60477,open,0,,2026-01-13,,kind:bug; kind:documentation
+60476,open,0,,2026-01-13,,kind:bug; kind:documentation
+60467,open,0,,2026-01-13,,area:API
+60466,open,0,,2026-01-13,,area:serialization
+60465,open,0,,2026-01-13,,area:serialization
+60464,open,0,,2026-01-13,,kind:feature; area:core
+60463,open,0,,2026-01-13,,kind:bug; area:CLI
+60461,closed,0,,2026-01-13,2026-01-14,kind:bug; area:API; area:helm-chart; area:auth; needs-triage
+60460,open,0,,2026-01-13,,kind:feature; good first issue; area:UI
+60455,open,0,,2026-01-13,,kind:meta; area:backfill
+60447,open,0,,2026-01-13,,kind:documentation; kind:meta
+60444,open,0,,2026-01-13,,kind:bug; area:providers; provider:databricks
+60443,open,0,,2026-01-13,,kind:feature; area:core; needs-triage
+60439,closed,0,,2026-01-13,2026-01-13,kind:feature; area:UI; needs-triage
+60421,open,0,,2026-01-12,,area:CLI; kind:feature; kind:meta; area:airflow-ctl
+60408,open,0,,2026-01-12,,kind:bug; good first issue; area:core
+60406,open,0,,2026-01-12,,kind:bug; area:helm-chart; needs-triage

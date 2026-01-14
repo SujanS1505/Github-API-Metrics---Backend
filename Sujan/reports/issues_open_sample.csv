@@ -1,0 +1,31 @@
+issue_number,title,created_at,age_days,comments,author,labels
+58470,Update time-machine to 3.0.0,2025-11-19,56,3,bugraoz93,area:providers; good first issue; kind:meta; dependencies
+58474,Manipulate partitioned asset events from task context,2025-11-19,56,1,dstandish,kind:feature; kind:meta; area:core
+58490,KPO deferring unnesserially on retry,2025-11-19,56,1,johnhoran,kind:bug; area:providers; provider:cncf-kubernetes; needs-triage
+58496,KubernetesJobOperator Duplicate Pod Race Condition,2025-11-19,56,4,rachthree,kind:bug; area:providers; provider:cncf-kubernetes; needs-triage
+58510,API Server Opening Excessive Connections to PGBouncer and Not Closing Them,2025-11-20,55,3,tfagan25,kind:bug; area:API; area:core; needs-triage
+58529,Investigate option for execution API Connections datamodel for connections with no `conn_type`,2025-11-20,55,2,amoghrajesh,area:API; kind:meta
+58536,Task duration keeps increasing for skipped tasks due to DAG timeout,2025-11-20,55,3,karenbraganz,kind:bug; area:core
+58550,software cccessibility,2025-11-21,54,1,RobinT1987,kind:feature; area:UI; needs-triage
+58553,Airflow 3 Log view displayed incorrectly,2025-11-21,54,5,melicheradam,kind:bug; area:core; area:UI; affected_version:3.1
+58562,[3.x] SDK subprocess killed with SIGKILL when patching TaskInstance (ServerResponseError),2025-11-21,54,1,wolvery,kind:bug; area:API; area:core; needs-triage
+58567,Test connection not working,2025-11-21,54,4,EbrahimKaram,kind:bug; good first issue; area:core; area:UI
+58570,Celery: Task executed twice on scheduler crash due to adopt_or_reset_orphaned_tasks,2025-11-21,53,4,arkadiuszbach,kind:bug; area:Scheduler; area:core; needs-triage
+58610,Add official support for InfluxDB 3 in apache-airflow-providers-influxdb,2025-11-24,51,8,arpitrathore,area:providers; kind:feature; good first issue; needs-triage
+58625,Worker pod template image does not support image digest,2025-11-24,51,1,ja-michel,kind:bug; area:helm-chart; needs-triage
+58676,Logs disappearing for deferred CloudRunExecuteJobOperator while state is deferred,2025-11-25,50,6,MarcusCramer91,kind:bug; pending-response; area:core; affected_version:3.1
+58679,Problem with the sensor file,2025-11-25,50,3,EbrahimKaram,kind:bug; area:core
+58710,Unique constraint violation when manually triggering DAG from UI since Airflow 3.1.3,2025-11-26,49,3,dabla,kind:bug; area:core; area:UI; needs-triage
+58717,DAG disappears in airflow 3.1.3,2025-11-26,49,10,narenjngr,kind:bug; priority:high; area:core; needs-triage
+58724,PythonVirtualenvOperator fails to access Variables/Connections via Task SDK in Airflow 3.1.3 on Kubernetes,2025-11-26,49,6,cetingokhan,kind:bug; area:core; provider:standard; affected_version:3.1
+58736,Latest KubernetesPodOperator (Ver: 10.10.0) get 403 error (Forbidden to list K8s Events),2025-11-26,49,2,yovio-rca,kind:bug; area:providers; good first issue; area:helm-chart; provider:cncf-kubernetes
+58770,Cannot configure FileTaskHandler max_bytes via remote_task_handler_kwargs in Airflow 3,2025-11-27,48,1,AutomationDev85,kind:bug; area:logging; needs-triage
+58812,Airflow UI still thinks task is mapped task after re-running a failed DagRun,2025-11-28,47,0,dabla,kind:bug; area:core; area:UI; area:dynamic-task-mapping; needs-triage
+58826,"DatabricksWorkflowTaskGroup: ""Repair single task"" and ""Repair all failed tasks"" UI links non-functional for Databricks w",2025-11-28,47,2,brunocmartins,kind:bug; area:providers; area:UI; provider:databricks; needs-triage
+58886,Do not use serde library for database migrations,2025-12-01,44,5,amoghrajesh,kind:meta; area:db-migrations
+58892,display commit under metadata header for DAGs,2025-12-01,44,2,jeremychia,kind:feature; area:UI; needs-triage
+58894,Airflow migration from 2.11 to 3.1.3 MySQL wrong index creation syntax,2025-12-01,44,4,vinitpayal,kind:bug; area:core; needs-triage; area:db-migrations
+58906,Consistent Fernet Key Handling Strategy,2025-12-01,44,1,bugraoz93,security; kind:feature; kind:meta; area:auth; area:core
+58932,Check if airflow is mounted from Windows filesystem in Breeze,2025-12-02,43,4,potiuk,area:dev-env; good first issue
+58936,In Airflow 3 interruptions of the Airflow worker pod on k8s are not handled,2025-12-02,43,0,nclaeys,kind:bug; area:providers; area:core; provider:cncf-kubernetes; affected_version:3.1
+58941,dbt-cloud test_connection giving 400 response code,2025-12-02,43,0,gunjisairevanth,kind:bug; area:providers; needs-triage; provider:dbt-cloud

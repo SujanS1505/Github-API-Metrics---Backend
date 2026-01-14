@@ -1,12 +1,10 @@
-from datetime import datetime, timedelta
 from collections import Counter
-
-from api import issues
+from datetime import datetime, timedelta
 
 
 def open_closed_ratio(issues):
-    open_issues = sum(1 for i in issues if i["state"] == "open")
-    closed_issues = sum(1 for i in issues if i["state"] == "closed")
+    open_issues = sum(1 for i in issues if i.get("state") == "open")
+    closed_issues = sum(1 for i in issues if i.get("state") == "closed")
 
     total = open_issues + closed_issues
     ratio = round(open_issues / total, 2) if total else 0
@@ -14,7 +12,7 @@ def open_closed_ratio(issues):
     return {
         "open_issues": open_issues,
         "closed_issues": closed_issues,
-        "open_closed_ratio": ratio
+        "open_closed_ratio": ratio,
     }
 
 
@@ -22,7 +20,7 @@ def average_resolution_time_days(issues):
     durations = []
 
     for issue in issues:
-        if issue["state"] == "closed" and issue["closed_at"]:
+        if issue.get("state") == "closed" and issue.get("closed_at") and issue.get("created_at"):
             delta = issue["closed_at"] - issue["created_at"]
             durations.append(delta.total_seconds() / 86400)
 
@@ -36,11 +34,24 @@ def bug_vs_feature_ratio(issues):
     bug = 0
     feature = 0
 
+    bug_tokens = ("bug", "kind:bug", "type:bug")
+    feature_tokens = (
+        "feature",
+        "enhancement",
+        "kind:feature",
+        "type:feature",
+        "type:enhancement",
+    )
+
     for issue in issues:
-        labels = [l.lower() for l in issue["labels"]]
-        if "bug" in labels:
+        labels = [str(l).lower() for l in issue.get("labels", [])]
+
+        is_bug = any(any(tok in label for tok in bug_tokens) for label in labels)
+        is_feature = any(any(tok in label for tok in feature_tokens) for label in labels)
+
+        if is_bug:
             bug += 1
-        elif "feature" in labels or "enhancement" in labels:
+        elif is_feature:
             feature += 1
 
     ratio = round(bug / feature, 2) if feature else None
@@ -48,59 +59,44 @@ def bug_vs_feature_ratio(issues):
     return {
         "bug_issues": bug,
         "feature_issues": feature,
-        "bug_feature_ratio": ratio
+        "bug_feature_ratio": ratio,
     }
 
 
+def issues_created_vs_closed_per_sprint(issues, sprint_start_date=None, sprint_days=14):
+    """Counts issues created/closed per sprint window.
 
-
-def issues_created_vs_closed_per_sprint(
-    issues,
-    sprint_start_date=None,
-    sprint_days=14
-):
-    """
-    Calculates number of issues created and closed per sprint.
+    Sprints are fixed-size buckets of `sprint_days` starting from `sprint_start_date`.
+    If sprint_start_date is None, uses the earliest created_at in the provided issues.
     """
 
     if not issues:
-        return {
-            "created": {},
-            "closed": {},
-        }
+        return {"created": {}, "closed": {}}
 
     if sprint_start_date is None:
-        valid_dates = [i["created_at"] for i in issues if i.get("created_at")]
+        valid_dates = [i.get("created_at") for i in issues if i.get("created_at")]
         if not valid_dates:
-            return {
-                "created": {},
-                "closed": {},
-            }
+            return {"created": {}, "closed": {}}
         sprint_start_date = min(valid_dates)
 
     created = Counter()
     closed = Counter()
 
     for issue in issues:
-        # CREATED
-        if not issue.get("created_at"):
+        created_at = issue.get("created_at")
+        if not created_at:
             continue
 
-        days_since_start = (issue["created_at"] - sprint_start_date).days
+        days_since_start = (created_at - sprint_start_date).days
         sprint_index = days_since_start // sprint_days
         sprint_start = sprint_start_date + timedelta(days=sprint_index * sprint_days)
         created[sprint_start.date()] += 1
 
-        # CLOSED
-        if issue["closed_at"]:
-            days_since_start_closed = (issue["closed_at"] - sprint_start_date).days
+        closed_at = issue.get("closed_at")
+        if closed_at:
+            days_since_start_closed = (closed_at - sprint_start_date).days
             sprint_index_closed = days_since_start_closed // sprint_days
-            sprint_start_closed = sprint_start_date + timedelta(
-                days=sprint_index_closed * sprint_days
-            )
+            sprint_start_closed = sprint_start_date + timedelta(days=sprint_index_closed * sprint_days)
             closed[sprint_start_closed.date()] += 1
 
-    return {
-        "created": dict(created),
-        "closed": dict(closed)
-    }
+    return {"created": dict(created), "closed": dict(closed)}
