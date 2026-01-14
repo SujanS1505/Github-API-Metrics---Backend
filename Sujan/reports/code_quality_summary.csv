@@ -1,5 +1,5 @@
 metric,value
-files_analyzed,1504
+files_analyzed,1539
 hotspot_files,1
-test_to_code_ratio,0.27
+test_to_code_ratio,0.22
 stale_files,0

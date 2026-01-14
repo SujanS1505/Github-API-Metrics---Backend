@@ -1,2 +1,2 @@
 file_path,code_churn,commit_count
-helm-tests/tests/helm_tests/airflow_core/test_worker.py,938,12
+helm-tests/tests/helm_tests/airflow_core/test_worker.py,941,13

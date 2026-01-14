@@ -12,9 +12,12 @@ from reports.csv_writer import (
 )
 
 
-def run_issue_metrics(client, owner, repo):
+def run_issue_metrics(client, owner, repo, max_pages=None):
     # Fetch issues
-    issues = fetch_all_issues(client, owner, repo)
+    if max_pages is None:
+        issues = fetch_all_issues(client, owner, repo)
+    else:
+        issues = fetch_all_issues(client, owner, repo, max_pages=max_pages)
 
     print(f"\nTotal issues fetched: {len(issues)}")
 

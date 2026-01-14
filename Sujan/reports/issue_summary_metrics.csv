@@ -1,8 +1,8 @@
 metric,value
-open_issues,300
-closed_issues,384
-open_closed_ratio,0.44
-avg_resolution_time_days,10.62
+open_issues,191
+closed_issues,162
+open_closed_ratio,0.54
+avg_resolution_time_days,8.87
 bug_issues,0
 feature_issues,0
 bug_feature_ratio,
