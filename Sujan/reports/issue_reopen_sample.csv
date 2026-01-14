@@ -1,4 +1,7 @@
 issue_number,state,reopen_count,last_reopened_at,created_at,closed_at,labels
+60544,open,0,,2026-01-14,,kind:bug; area:core; area:UI; needs-triage
+60542,open,0,,2026-01-14,,kind:bug; area:API; area:auth; area:core; needs-triage
+60541,open,0,,2026-01-14,,kind:bug; area:core; area:UI; needs-triage
 60540,open,0,,2026-01-14,,good first issue; kind:meta
 60535,open,0,,2026-01-14,,kind:bug; provider:google; area:providers; needs-triage
 60527,open,0,,2026-01-14,,kind:bug; area:Scheduler; area:providers; provider:cncf-kubernetes; needs-triage
@@ -26,6 +29,3 @@ issue_number,state,reopen_count,last_reopened_at,created_at,closed_at,labels
 60444,open,0,,2026-01-13,,kind:bug; area:providers; provider:databricks
 60443,open,0,,2026-01-13,,kind:feature; area:core; needs-triage
 60439,closed,0,,2026-01-13,2026-01-13,kind:feature; area:UI; needs-triage
-60421,open,0,,2026-01-12,,area:CLI; kind:feature; kind:meta; area:airflow-ctl
-60408,open,0,,2026-01-12,,kind:bug; good first issue; area:core
-60406,open,0,,2026-01-12,,kind:bug; area:helm-chart; needs-triage

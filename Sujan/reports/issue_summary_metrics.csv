@@ -1,10 +1,10 @@
 metric,value
-open_issues,192
+open_issues,194
 closed_issues,162
 open_closed_ratio,0.54
 avg_resolution_time_days,8.87
-bug_issues,215
+bug_issues,218
 feature_issues,76
-bug_feature_ratio,2.83
+bug_feature_ratio,2.87
 issue_reopen_rate_pct,0.0
 issue_reopen_sample_size,30

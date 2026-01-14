@@ -1,5 +1,4 @@
 issue_number,title,created_at,age_days,comments,author,labels
-58470,Update time-machine to 3.0.0,2025-11-19,56,3,bugraoz93,area:providers; good first issue; kind:meta; dependencies
 58474,Manipulate partitioned asset events from task context,2025-11-19,56,1,dstandish,kind:feature; kind:meta; area:core
 58490,KPO deferring unnesserially on retry,2025-11-19,56,1,johnhoran,kind:bug; area:providers; provider:cncf-kubernetes; needs-triage
 58496,KubernetesJobOperator Duplicate Pod Race Condition,2025-11-19,56,4,rachthree,kind:bug; area:providers; provider:cncf-kubernetes; needs-triage
@@ -10,7 +9,7 @@ issue_number,title,created_at,age_days,comments,author,labels
 58553,Airflow 3 Log view displayed incorrectly,2025-11-21,54,5,melicheradam,kind:bug; area:core; area:UI; affected_version:3.1
 58562,[3.x] SDK subprocess killed with SIGKILL when patching TaskInstance (ServerResponseError),2025-11-21,54,1,wolvery,kind:bug; area:API; area:core; needs-triage
 58567,Test connection not working,2025-11-21,54,4,EbrahimKaram,kind:bug; good first issue; area:core; area:UI
-58570,Celery: Task executed twice on scheduler crash due to adopt_or_reset_orphaned_tasks,2025-11-21,53,4,arkadiuszbach,kind:bug; area:Scheduler; area:core; needs-triage
+58570,Celery: Task executed twice on scheduler crash due to adopt_or_reset_orphaned_tasks,2025-11-21,54,4,arkadiuszbach,kind:bug; area:Scheduler; area:core; needs-triage
 58610,Add official support for InfluxDB 3 in apache-airflow-providers-influxdb,2025-11-24,51,8,arpitrathore,area:providers; kind:feature; good first issue; needs-triage
 58625,Worker pod template image does not support image digest,2025-11-24,51,1,ja-michel,kind:bug; area:helm-chart; needs-triage
 58676,Logs disappearing for deferred CloudRunExecuteJobOperator while state is deferred,2025-11-25,50,6,MarcusCramer91,kind:bug; pending-response; area:core; affected_version:3.1
@@ -29,3 +28,4 @@ issue_number,title,created_at,age_days,comments,author,labels
 58932,Check if airflow is mounted from Windows filesystem in Breeze,2025-12-02,43,4,potiuk,area:dev-env; good first issue
 58936,In Airflow 3 interruptions of the Airflow worker pod on k8s are not handled,2025-12-02,43,0,nclaeys,kind:bug; area:providers; area:core; provider:cncf-kubernetes; affected_version:3.1
 58941,dbt-cloud test_connection giving 400 response code,2025-12-02,43,0,gunjisairevanth,kind:bug; area:providers; needs-triage; provider:dbt-cloud
+58942,Current logical-dateless partition-driven timetable creates wrong run,2025-12-02,43,1,dstandish,kind:bug; area:Scheduler; kind:meta
